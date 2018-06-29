@@ -1,4 +1,4 @@
 class Zdravic:
 
     def pozdrav (self, jmeno):
-        print("Zdar {0}".format(jmeno))
+        return "{0} {1}".format(self.text, jmeno)
