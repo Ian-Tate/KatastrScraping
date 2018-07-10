@@ -1,17 +1,6 @@
-from Kostka import Kostka
-from Zdravic import Zdravic
+import Scraper
 
-zdravic = Zdravic()
-zdravic.text = "Ahoj"
-print(zdravic.pozdrav("hráči!"))
+url = "http://nahlizenidokn.cuzk.cz/ZobrazObjekt.aspx?encrypted=TpAPYChmh9dJYLP1ld3eLnekI72grEUiRKbm4ltAxuR6Dc7OFq_BhT9_uz1MAXZ3wmCXL-P46sXgAN1tu3jE8YBxpn6sMEQOOKI3rlfX5OQOWNamowDing=="
 
-sestistenna_kostka = Kostka()
-desetistenna_kostka = Kostka(10)
-
-print(sestistenna_kostka)
-for _ in range(10):
-    print(sestistenna_kostka.hod_kostkou(), end=" ")
-
-print("\n", desetistenna_kostka, sep="")
-for _ in range(10):
-    print(desetistenna_kostka.hod_kostkou(), end=" ")
+table = Scraper.scrap_seznam_nemovitosti(url)
+print(table)
